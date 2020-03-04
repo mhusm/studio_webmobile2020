@@ -41,7 +41,12 @@ volumes:
   certbot-etc:
   certbot-var:
   web-root: 
-  dhparam:
+    dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/maria_husmann/studio_webmobile2020/dhparam/
+      o: bind
 
 
 networks:
