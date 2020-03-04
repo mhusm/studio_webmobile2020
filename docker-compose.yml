@@ -8,6 +8,8 @@ services:
     image: nodejs
     container_name: nodejs
     restart: unless-stopped
+    networks:
+      - app-network
   webserver:
     image: nginx:mainline-alpine
     container_name: webserver
